@@ -14,4 +14,7 @@ The code is in C++, written many years ago for the old Watcom compiler when it w
 The exe here is windows-32.
 The UI is operated by keyboard or by a right-click menu, which shows the keystrokes.
 
+I redid some of the code in Java just to compare speed... I'm not sure the Java version was ever working correctly.
+In general this was never meant to be a slick polished public release — just some rough-and-ready code for personal experimentation.
+
 No license, use it as you wish.
