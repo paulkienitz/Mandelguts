@@ -1,0 +1,46 @@
+To do in MandelGuts:
+====================
+
+Suddenly the Java benchmark is 2.5 times as fast as the C++ one, after fixing
+the addition of new values to loopcheck.  Something is fishy here, and one way
+to eliminate possible sources of fish is to make each benchmark run four threads.
+Nah, I can check CPU usage.  The C++ benchmark uses 25%.  (The real app uses 100%.)
+The Java benchmark uses... 25%.  So unless it's producing incorrect results, that's
+a legitimate comparison.  Now I have to verify that the results are correct...
+
+MENU GRAYING STILL DOESN'T WORK.  (Did it ever, in the main menu?)
+
+It can get wedged if you stop in the middle... it really wedges good if
+you drag the mouse while calculating.
+
+Just hitting Go on an existing picture can lock it up.  CPU usage is 25%.
+
+
+--
+
+TEST:  Title bar should not show loop diameter in length-only mode.
+
+RETEST:  Context menu position by mouse and keyboard when not maximized.
+
+--
+
+Shift-drag = move image without changing zoom.
+
+Replace sprintf and wsprintf with CString.Format calls.
+(Not much point when cprintf all over.  Also awkward in edit controls.)
+
+Rename the New... command suitably.
+
+Block accelerators (prevent dialogs, etc) when menus are supposed to be grayed.
+
+When doing New manually after resize, preserve existing bounds, adjusting for aspect
+ratio by lengthening whichever axis got a bigger share than before.
+
+Title bar should report time taken at end of calc?
+
+Hide "iteration count 0" in undone areas.
+
+--
+
+Mode to try everything first with 100 iterations, then automatically try 1000 on
+the white spots, then 10000, then 100000...?

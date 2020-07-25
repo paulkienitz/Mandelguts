@@ -1,0 +1,39 @@
+#include <afxres.h>
+#include <afxres.rc>
+#include "resource.h"
+
+IDD_BOUNDSDLG DIALOGEX FIXED DISCARDABLE  73, 40, 285, 190
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_OVERLAPPED | WS_CAPTION | WS_VISIBLE | WS_SYSMENU
+CAPTION "Set View Range"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL "Pixel size: 1 x 1",                   IDC_BOUNDS_PIXELSIZE, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE, 95, 4, 78, 10
+	CONTROL "Real &center:",                       -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 7, 23, 46, 12
+	CONTROL "",                                    IDC_BOUNDS_REALSLIDER, "msctls_trackbar32", NOT WS_VISIBLE | WS_CHILD | WS_TABSTOP, 64, 22, 115, 13, WS_EX_STATICEDGE  // hidden
+	CONTROL "",                                    IDC_BOUNDS_REALCENTER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 185, 23, 85, 12
+	CONTROL "&Imaginary center:",                  -2, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 7, 41, 55, 12
+	CONTROL "",                                    IDC_BOUNDS_IMAGSLIDER, "msctls_trackbar32", NOT WS_VISIBLE | WS_CHILD | WS_TABSTOP, 64, 40, 115, 13, WS_EX_STATICEDGE  // hidden
+	CONTROL "",                                    IDC_BOUNDS_IMAGCENTER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 185, 41, 85, 12
+	CONTROL "&Width:",                             -3, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 7, 58, 49, 12
+	CONTROL "",                                    IDC_BOUNDS_WIDTHSLIDER, "msctls_trackbar32", NOT WS_VISIBLE | WS_CHILD | WS_TABSTOP, 64, 57, 115, 13, WS_EX_STATICEDGE  // hidden
+	CONTROL "",                                    IDC_BOUNDS_WIDTH, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 185, 58, 85, 12
+	CONTROL "REAL:",                               -4, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 8, 81, 26, 10
+	CONTROL "from",                                -5, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 53, 81, 18, 10
+	CONTROL "",                                    IDC_BOUNDS_LEFT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 76, 80, 67, 12
+	CONTROL "(&left)           to",                -6, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 146, 81, 36, 10
+	CONTROL "",                                    IDC_BOUNDS_RIGHT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 191, 80, 67, 12
+	CONTROL "(&right)",                            -7, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 261, 81, 20, 10
+	CONTROL "IMAGINARY:",                          -8, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 8, 100, 38, 10
+	CONTROL "from",                                -9, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 53, 100, 18, 10
+	CONTROL "",                                    IDC_BOUNDS_BOTTOM, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 76, 99, 67, 12
+	CONTROL "(&bottom)   to",                      -10, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 146, 100, 36, 10
+	CONTROL "",                                    IDC_BOUNDS_TOP, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 191, 99, 67, 12
+	CONTROL "(&top)",                              -11, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 261, 100, 18, 10
+	CONTROL "&Max iterations:",                    -12, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 9, 130, 46, 10
+	CONTROL "",                                    IDC_BOUNDS_ITERATIONS, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 68, 129, 48, 12
+	CONTROL "Max &loop length:",                   -13, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 152, 130, 52, 10
+	CONTROL "",                                    IDC_BOUNDS_LOOPMAX, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 210, 129, 48, 12
+	CONTROL "Color interior by loop length &only", IDC_BOUNDS_LENGTHONLY, "BUTTON", BS_AUTOCHECKBOX | BS_LEFT | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 41, 149, 107, 10
+	CONTROL "OK",                                  IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 68, 166, 61, 16
+	CONTROL "Cancel",                              IDCANCEL, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 150, 166, 61, 16
+END

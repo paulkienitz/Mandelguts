@@ -6,6 +6,9 @@
 *.lo
 *.o
 *.obj
+*.lk1
+*.sym
+*.mk1
 
 # Precompiled Headers
 *.gch
@@ -25,8 +28,18 @@
 *.la
 *.a
 *.lib
+*.class
 
 # Executables
 *.exe
 *.out
 *.app
+
+images/*
+mandel_bench.tgt
+mandel_bench.map
+mandelguts.map
+mandelguts.mk
+mandelguts.tgt
+mandelguts.wpj
+mandel.res

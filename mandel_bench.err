@@ -1,0 +1,2 @@
+point.cpp(74): Error! E029: col(29) symbol 'FOUR' has not been declared 
+point.cpp(74): Note! N393: col(29) included from mandel_bench.cpp(9) 

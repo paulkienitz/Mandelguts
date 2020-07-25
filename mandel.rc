@@ -1,0 +1,66 @@
+//***********************************************************************
+//
+//  mandel.rc
+//
+//***********************************************************************
+
+#include <afxres.h>
+#include <afxres.rc>
+#include "resource.h"
+
+IDR_MAINDEL   ICON mandel.ico
+
+
+IDR_MAINDEL MENU
+BEGIN
+    MENUITEM "DUMMY", -1
+END
+
+IDR_POPUP MENU
+BEGIN
+    POPUP "&Picture" {
+        MENUITEM "&New...\tN",                  CM_MANDEL_NEW
+        MENUITEM "Set Bounds...\tB",            CM_MANDEL_SETBOUNDS, GRAYED
+        MENUITEM "Start &Calculating\tG",       CM_MANDEL_GO,        GRAYED
+        MENUITEM "&More Iterations...\tM",      CM_MANDEL_MORE,      GRAYED
+        MENUITEM "&Save as .BMP...\tCtrl+A",    ID_FILE_SAVE_AS,     GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&About MandelGuts...",        ID_APP_ABOUT
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    }
+END
+
+IDR_MAINDEL ACCELERATORS
+BEGIN
+    "N",    CM_MANDEL_NEW,        VIRTKEY,    CONTROL
+    "N",    CM_MANDEL_NEW,        VIRTKEY
+    "B",    CM_MANDEL_SETBOUNDS,  VIRTKEY,    CONTROL
+    "B",    CM_MANDEL_SETBOUNDS,  VIRTKEY
+    "G",    CM_MANDEL_GO,         VIRTKEY,    CONTROL
+    "G",    CM_MANDEL_GO,         VIRTKEY
+    "S",    CM_MANDEL_STOP,       VIRTKEY,    CONTROL
+    "S",    CM_MANDEL_STOP,       VIRTKEY
+    "M",    CM_MANDEL_MORE,       VIRTKEY,    CONTROL
+    "M",    CM_MANDEL_MORE,       VIRTKEY
+    "A",    ID_FILE_SAVE_AS,      VIRTKEY
+END
+
+STRINGTABLE PRELOAD MOVEABLE
+BEGIN
+    IDR_MAINDEL,      NAME_AND_VERSION
+END
+
+IDD_ABOUTDLG DIALOG FIXED DISCARDABLE  128, 94, 148, 95
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUPWINDOW | WS_VISIBLE | WS_DLGFRAME
+CAPTION "About MandelGuts"
+FONT 10, "MS Sans Serif"
+BEGIN
+	CONTROL NAME_AND_VERSION,      -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 18, 13, 109, 8
+	CONTROL "by Paul Kienitz",     -2, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 18, 27, 109, 8
+	CONTROL "No rights reserved.", -3, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 18, 42, 109, 8
+	CONTROL "OK",                  IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 49, 64, 50, 14
+END
+
+#include "moreiterations.dlg"
+
+#include "bounds.dlg"
