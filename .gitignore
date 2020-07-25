@@ -30,11 +30,6 @@
 *.lib
 *.class
 
-# Executables
-*.exe
-*.out
-*.app
-
 images/*
 mandel_bench.tgt
 mandel_bench.map
@@ -43,3 +38,5 @@ mandelguts.mk
 mandelguts.tgt
 mandelguts.wpj
 mandel.res
+INTERMEDIATE mandel2.exe
+ORIGINAL mandel.exe
